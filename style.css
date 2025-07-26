@@ -1,0 +1,69 @@
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  margin: 0;
+  background-color: #f7f4fc;
+  color: #333;
+  line-height: 1.6;
+}
+
+h1, h2 {
+  font-family: 'Noto Serif KR', serif;
+  color: #6c5ce7;
+}
+
+section {
+  padding: 2rem 1.5rem;
+  text-align: center;
+}
+
+.intro {
+  background-color: #dcd0ff;
+  padding: 3rem 1.5rem;
+  color: white;
+}
+
+.gallery-images {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  padding: 1rem 0;
+}
+
+.gallery-images img {
+  height: 200px;
+  border-radius: 10px;
+}
+
+.map iframe {
+  border: none;
+  border-radius: 10px;
+}
+
+.account ul {
+  list-style: none;
+  padding: 0;
+}
+
+.account li {
+  background-color: #efe6ff;
+  margin: 0.5rem 0;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.contacts a {
+  display: inline-block;
+  margin: 0.5rem;
+  padding: 0.5rem 1rem;
+  background-color: #6c5ce7;
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+footer {
+  background-color: #dcd0ff;
+  padding: 1rem;
+  font-size: 0.9rem;
+  color: white;
+}
