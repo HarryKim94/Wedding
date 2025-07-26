@@ -76,9 +76,13 @@
 
     .map-wrapper img {
       width: 100%;
-      max-height: 200px;
-      object-fit: cover;
+      height: auto;
       border-radius: 12px;
+      transition: transform 0.3s ease;
+    }
+
+    .map-wrapper a:hover img {
+      transform: scale(1.02);
     }
 
     .calendar-box {
@@ -151,7 +155,7 @@
 </head>
 <body>
   <section class="intro">
-    <h1 data-aos="fade-up">김현수 💜 은지성</h1>
+    <h1 data-aos="fade-up">김현수 💜 은지성 수정중</h1>
     <p data-aos="fade-up" data-aos-delay="200">2025년 9월 27일, 저희 결혼합니다</p>
   </section>
 
@@ -179,7 +183,9 @@
       </table>
     </div>
     <div class="map-wrapper">
-      <img src="https://dapi.kakao.com/v2/maps/staticmap?appkey=29eee6c5023a47beb6bcd4f5a4732888&center=126.924759,37.522733&level=3&markers=126.924759,37.522733" alt="더파티움 여의도 위치 지도" />
+      <a href="https://place.map.kakao.com/27310877" target="_blank" rel="noopener noreferrer">
+        <img src="https://map.kakao.com/staticmap/v2/map?center=126.924759,37.522733&level=3&appkey=29eee6c5023a47beb6bcd4f5a4732888&marker=type:d|pos:126.924759 37.522733" alt="더파티움 여의도 위치 지도" />
+      </a>
     </div>
   </section>
 
