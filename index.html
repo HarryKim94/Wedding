@@ -7,6 +7,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Noto+Sans+KR&display=swap" rel="stylesheet">
   <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+  <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=29eee6c5023a47beb6bcd4f5a4732888"></script>
   <style>
     body {
       margin: 0;
@@ -102,15 +103,15 @@
 
     .map-wrapper {
       width: 100%;
-      height: auto;
+      height: 350px;
       margin-top: 1rem;
       border-radius: 12px;
+      overflow: hidden;
     }
 
-    .map-wrapper img {
+    #map {
       width: 100%;
-      height: auto;
-      border-radius: 12px;
+      height: 100%;
     }
 
     .account ul {
@@ -173,7 +174,7 @@
       </table>
     </div>
     <div class="map-wrapper">
-      <img src="https://map2.daum.net/map/images/service/staticmap/v5/?center=126.924759,37.522733&level=3&width=600&height=350&marker=type:d|pos:126.924759 37.522733" alt="지도 이미지">
+      <div id="map"></div>
     </div>
   </section>
 
@@ -218,6 +219,18 @@
       centeredSlides: true,
       loop: true
     });
+
+    // Kakao Map
+    const container = document.getElementById('map');
+    const options = {
+      center: new kakao.maps.LatLng(37.522733, 126.924759),
+      level: 3
+    };
+    const map = new kakao.maps.Map(container, options);
+    const marker = new kakao.maps.Marker({
+      position: options.center
+    });
+    marker.setMap(map);
   </script>
 </body>
 </html>
