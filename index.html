@@ -127,12 +127,45 @@
   </style>
 </head>
 <body>
-  <!-- 기존 섹션 생략 -->
+  <div class="intro">
+    <h1>김현수 💜 은지성</h1>
+    <p>2025년 9월 27일 토요일 12시 10분<br>더파티움 여의도 파티움홀</p>
+  </div>
+
+  <section>
+    <h2>우리의 결혼식</h2>
+    <p>소중한 분들을 초대합니다. 오셔서 따뜻한 축복 부탁드립니다.</p>
+    <div class="calendar-box">
+      <table class="calendar-table">
+        <thead>
+          <tr><th>일</th><th>월</th><th>화</th><th>수</th><th>목</th><th>금</th><th>토</th></tr>
+        </thead>
+        <tbody>
+          <tr><td></td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td class="highlight">6</td></tr>
+          <tr><td>7</td><td>8</td><td>9</td><td>10</td><td>11</td><td>12</td><td>13</td></tr>
+          <tr><td>14</td><td>15</td><td>16</td><td>17</td><td>18</td><td>19</td><td>20</td></tr>
+          <tr><td>21</td><td>22</td><td>23</td><td>24</td><td>25</td><td>26</td><td class="highlight">27</td></tr>
+          <tr><td>28</td><td>29</td><td>30</td><td></td><td></td><td></td><td></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
   <div class="map-wrapper">
     <div id="map"></div>
   </div>
 
-  <!-- 스크립트 -->
+  <section>
+    <h2>갤러리</h2>
+    <div class="swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="https://via.placeholder.com/300x200?text=Image+1" alt="Gallery 1"></div>
+        <div class="swiper-slide"><img src="https://via.placeholder.com/300x200?text=Image+2" alt="Gallery 2"></div>
+        <div class="swiper-slide"><img src="https://via.placeholder.com/300x200?text=Image+3" alt="Gallery 3"></div>
+      </div>
+    </div>
+  </section>
+
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script>
@@ -144,7 +177,6 @@
       loop: true
     });
 
-    // Kakao 지도 autoload false 방식으로 명시적으로 load
     kakao.maps.load(function () {
       const container = document.getElementById('map');
       const options = {
