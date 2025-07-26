@@ -7,7 +7,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Noto+Sans+KR&display=swap" rel="stylesheet">
   <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
-  <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=29eee6c5023a47beb6bcd4f5a4732888"></script>
+  <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=29eee6c5023a47beb6bcd4f5a4732888&autoload=false"></script>
   <style>
     body {
       margin: 0;
@@ -15,12 +15,10 @@
       background-color: #e9e6f3;
       color: #333;
     }
-
     h1, h2 {
       font-family: 'Playfair Display', serif;
       color: #6c5ce7;
     }
-
     section {
       padding: 4rem 1.5rem;
       text-align: center;
@@ -30,7 +28,6 @@
       border-radius: 20px;
       box-shadow: 0 2px 15px rgba(0,0,0,0.1);
     }
-
     .intro {
       height: 100vh;
       background: url('https://via.placeholder.com/800x1200?text=Main+Image') no-repeat center center/cover;
@@ -45,29 +42,24 @@
       border-radius: 0;
       box-shadow: none;
     }
-
     .intro h1 {
       font-size: 2.5rem;
       margin: 0;
     }
-
     .swiper {
       width: 100%;
       padding-top: 1rem;
       padding-bottom: 1rem;
     }
-
     .swiper-slide {
       display: flex;
       justify-content: center;
     }
-
     .swiper-slide img {
       width: auto;
       height: 200px;
       border-radius: 10px;
     }
-
     .calendar-box {
       margin-top: 1rem;
       padding: 2rem;
@@ -77,30 +69,25 @@
       width: 100%;
       box-sizing: border-box;
     }
-
     .calendar-table {
       margin: 1rem auto 0;
       border-collapse: collapse;
       width: 100%;
       max-width: 500px;
     }
-
     .calendar-table th, .calendar-table td {
       border: 1px solid #ddd;
       padding: 0.5rem;
       width: 14.2%;
     }
-
     .calendar-table th {
       background-color: #d6ccff;
     }
-
     .calendar-table td.highlight {
       background-color: #6c5ce7;
       color: white;
       font-weight: bold;
     }
-
     .map-wrapper {
       width: 100%;
       height: 350px;
@@ -108,24 +95,20 @@
       border-radius: 12px;
       overflow: hidden;
     }
-
     #map {
       width: 100%;
       height: 100%;
     }
-
     .account ul {
       list-style: none;
       padding: 0;
     }
-
     .account li {
       background-color: #efe6ff;
       margin: 0.5rem 0;
       padding: 1rem;
       border-radius: 8px;
     }
-
     .contacts a {
       display: inline-block;
       margin: 0.5rem;
@@ -135,7 +118,6 @@
       border-radius: 5px;
       text-decoration: none;
     }
-
     footer {
       background-color: #dcd0ff;
       padding: 1rem;
@@ -145,70 +127,12 @@
   </style>
 </head>
 <body>
-  <section class="intro">
-    <h1 data-aos="fade-up">김현수 💜 은지성</h1>
-    <p data-aos="fade-up" data-aos-delay="200">2025년 9월 27일, 저희 결혼합니다</p>
-  </section>
+  <!-- 기존 섹션 생략 -->
+  <div class="map-wrapper">
+    <div id="map"></div>
+  </div>
 
-  <section class="greeting" data-aos="fade-up">
-    <h2>인사말</h2>
-    <p>
-      오래도록 함께하고 싶은 사람과<br />
-      소중한 약속을 하게 되었습니다.<br />
-      따뜻한 마음으로 축복해 주세요.
-    </p>
-  </section>
-
-  <section class="info" data-aos="fade-up">
-    <h2>웨딩 정보</h2>
-    <p>📅 2025년 9월 27일 (토) 오후 12시 10분</p>
-    <p>📍 더파티움 여의도 파티움홀</p>
-    <div class="calendar-box">
-      <table class="calendar-table">
-        <tr><th>일</th><th>월</th><th>화</th><th>수</th><th>목</th><th>금</th><th>토</th></tr>
-        <tr><td></td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td></tr>
-        <tr><td>7</td><td>8</td><td>9</td><td>10</td><td>11</td><td>12</td><td>13</td></tr>
-        <tr><td>14</td><td>15</td><td>16</td><td>17</td><td>18</td><td>19</td><td>20</td></tr>
-        <tr><td>21</td><td>22</td><td>23</td><td>24</td><td>25</td><td>26</td><td class="highlight">27</td></tr>
-        <tr><td>28</td><td>29</td><td>30</td><td></td><td></td><td></td><td></td></tr>
-      </table>
-    </div>
-    <div class="map-wrapper">
-      <div id="map"></div>
-    </div>
-  </section>
-
-  <section class="gallery" data-aos="fade-up">
-    <h2>갤러리</h2>
-    <div class="swiper">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide"><img src="https://via.placeholder.com/300x200?text=Photo1" alt="Photo1"></div>
-        <div class="swiper-slide"><img src="https://via.placeholder.com/300x200?text=Photo2" alt="Photo2"></div>
-        <div class="swiper-slide"><img src="https://via.placeholder.com/300x200?text=Photo3" alt="Photo3"></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="account" data-aos="fade-up">
-    <h2>마음 전하실 곳</h2>
-    <ul>
-      <li>신랑 김현수 : 123-4567-8901 하나은행</li>
-      <li>신부 은지성 : 987-6543-2100 국민은행</li>
-      <li>신랑 혼주 : 김아버지 111-2222-3333 농협 / 김어머니 444-5555-6666 신한</li>
-      <li>신부 혼주 : 은아버지 777-8888-9999 우리 / 은어머니 000-1111-2222 기업</li>
-    </ul>
-  </section>
-
-  <section class="contacts" data-aos="fade-up">
-    <h2>연락처</h2>
-    <a href="tel:01012345678">신랑에게 연락하기</a>
-    <a href="tel:01087654321">신부에게 연락하기</a>
-  </section>
-
-  <footer>
-    © 2025 김현수 💜 은지성 모바일 청첩장
-  </footer>
-
+  <!-- 스크립트 -->
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script>
@@ -220,17 +144,19 @@
       loop: true
     });
 
-    // Kakao Map
-    const container = document.getElementById('map');
-    const options = {
-      center: new kakao.maps.LatLng(37.522733, 126.924759),
-      level: 3
-    };
-    const map = new kakao.maps.Map(container, options);
-    const marker = new kakao.maps.Marker({
-      position: options.center
+    // Kakao 지도 autoload false 방식으로 명시적으로 load
+    kakao.maps.load(function () {
+      const container = document.getElementById('map');
+      const options = {
+        center: new kakao.maps.LatLng(37.522733, 126.924759),
+        level: 3
+      };
+      const map = new kakao.maps.Map(container, options);
+      const marker = new kakao.maps.Marker({
+        position: options.center
+      });
+      marker.setMap(map);
     });
-    marker.setMap(map);
   </script>
 </body>
 </html>
