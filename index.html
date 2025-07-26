@@ -11,7 +11,7 @@
     body {
       margin: 0;
       font-family: 'Noto Sans KR', sans-serif;
-      background-color: #f7f4fc;
+      background-color: #e9e6f3;
       color: #333;
     }
 
@@ -24,11 +24,10 @@
       padding: 4rem 1.5rem;
       text-align: center;
       max-width: 700px;
-      margin: auto;
+      margin: 2rem auto;
       background-color: white;
       border-radius: 20px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.05);
-      margin-bottom: 2rem;
+      box-shadow: 0 2px 15px rgba(0,0,0,0.1);
     }
 
     .intro {
@@ -68,21 +67,31 @@
       border-radius: 10px;
     }
 
-    .map iframe {
+    .map-wrapper {
       width: 100%;
-      height: 150px;
-      border-radius: 10px;
-      border: none;
+      overflow: hidden;
+      border-radius: 12px;
+      margin-top: 1rem;
     }
 
-    .calendar-button {
+    .map-wrapper iframe {
+      width: 100%;
+      height: 200px;
+      border: 0;
+      border-radius: 12px;
+    }
+
+    .calendar-box {
       margin-top: 1rem;
+      padding: 1rem;
+      background-color: #f1ecff;
+      border-radius: 10px;
       display: inline-block;
-      padding: 0.5rem 1rem;
-      background-color: #6c5ce7;
-      color: white;
-      text-decoration: none;
-      border-radius: 5px;
+    }
+
+    .calendar-box p {
+      margin: 0;
+      font-weight: bold;
     }
 
     .account ul {
@@ -134,8 +143,10 @@
     <h2>웨딩 정보</h2>
     <p>📅 2025년 9월 27일 (토) 오후 12시 10분</p>
     <p>📍 더파티움 여의도 파티움홀</p>
-    <a class="calendar-button" href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=%EA%B9%80%ED%98%84%EC%88%98+%F0%9F%92%9C+%EC%9D%80%EC%A7%80%EC%84%B1+%EA%B2%B0%ED%98%BC%EC%8B%9D&dates=20250927T031000Z/20250927T043000Z&details=%EB%8D%94%ED%8C%8C%ED%8B%B0%EC%9B%80+%EC%97%AC%EC%9D%98%EB%8F%84+%ED%8C%8C%ED%8B%B0%EC%9B%80%ED%99%80&location=%EB%8D%94%ED%8C%8C%ED%8B%B0%EC%9B%80+%EC%97%AC%EC%9D%98%EB%8F%84" target="_blank">📅 캘린더에 추가하기</a>
-    <div class="map">
+    <div class="calendar-box">
+      <p>🗓️ 달력에 표시: 2025년 9월 27일 (토)</p>
+    </div>
+    <div class="map-wrapper">
       <iframe src="https://map.kakao.com/link/map/더파티움 여의도,37.522373,126.927218"></iframe>
     </div>
   </section>
