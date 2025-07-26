@@ -2,39 +2,119 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>김현수 💜 은지성 모바일 청첩장</title>
-  <link rel="stylesheet" href="style.css"/>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR&family=Noto+Sans+KR&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Noto+Sans+KR&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Noto Sans KR', sans-serif;
+      background-color: #f7f4fc;
+      color: #333;
+    }
+
+    h1, h2 {
+      font-family: 'Playfair Display', serif;
+      color: #6c5ce7;
+    }
+
+    section {
+      padding: 4rem 1.5rem;
+      text-align: center;
+      max-width: 700px;
+      margin: auto;
+    }
+
+    .intro {
+      height: 100vh;
+      background: url('https://via.placeholder.com/800x1200?text=Main+Image') no-repeat center center/cover;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: white;
+    }
+
+    .intro h1 {
+      font-size: 2.5rem;
+      margin: 0;
+    }
+
+    .gallery-images {
+      display: flex;
+      overflow-x: auto;
+      gap: 1rem;
+      padding: 1rem 0;
+    }
+
+    .gallery-images img {
+      height: 200px;
+      border-radius: 10px;
+    }
+
+    .map iframe {
+      width: 100%;
+      height: 200px;
+      border-radius: 10px;
+      border: none;
+    }
+
+    .account ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .account li {
+      background-color: #efe6ff;
+      margin: 0.5rem 0;
+      padding: 1rem;
+      border-radius: 8px;
+    }
+
+    .contacts a {
+      display: inline-block;
+      margin: 0.5rem;
+      padding: 0.5rem 1rem;
+      background-color: #6c5ce7;
+      color: white;
+      border-radius: 5px;
+      text-decoration: none;
+    }
+
+    footer {
+      background-color: #dcd0ff;
+      padding: 1rem;
+      color: white;
+      text-align: center;
+    }
+  </style>
 </head>
 <body>
   <section class="intro">
-    <h1>김현수 💜 은지성</h1>
-    <p>2025년 9월 27일, 저희 결혼합니다</p>
+    <h1 data-aos="fade-up">김현수 💜 은지성</h1>
+    <p data-aos="fade-up" data-aos-delay="200">2025년 9월 27일, 저희 결혼합니다</p>
   </section>
 
-  <section class="greeting">
+  <section class="greeting" data-aos="fade-up">
     <h2>인사말</h2>
     <p>
-      오래도록 함께하고 싶은 사람과<br/>
-      소중한 약속을 하게 되었습니다.<br/>
+      오래도록 함께하고 싶은 사람과<br />
+      소중한 약속을 하게 되었습니다.<br />
       따뜻한 마음으로 축복해 주세요.
     </p>
   </section>
 
-  <section class="info">
+  <section class="info" data-aos="fade-up">
     <h2>웨딩 정보</h2>
     <p>📅 2025년 9월 27일 (토) 오후 12시 10분</p>
     <p>📍 더파티움 여의도 파티움홀</p>
     <div class="map">
-      <iframe 
-        src="https://map.kakao.com/link/map/더파티움 여의도,37.522373,126.927218" 
-        width="100%" height="200" frameborder="0">
-      </iframe>
+      <iframe src="https://map.kakao.com/link/map/더파티움 여의도,37.522373,126.927218"></iframe>
     </div>
   </section>
 
-  <section class="gallery">
+  <section class="gallery" data-aos="fade-up">
     <h2>갤러리</h2>
     <div class="gallery-images">
       <img src="https://via.placeholder.com/300x200?text=Photo+1" alt="Photo1"/>
@@ -43,14 +123,14 @@
     </div>
   </section>
 
-  <section class="invitation">
+  <section class="invitation" data-aos="fade-up">
     <h2>초대합니다</h2>
     <p>신랑 김현수 · 신부 은지성</p>
     <p>신랑측 혼주: 아버지 김○○ · 어머니 이○○</p>
     <p>신부측 혼주: 아버지 은○○ · 어머니 정○○</p>
   </section>
 
-  <section class="account">
+  <section class="account" data-aos="fade-up">
     <h2>마음 전하실 곳</h2>
     <ul>
       <li>👰 신부 은지성: 국민은행 123-4567-8901</li>
@@ -62,7 +142,7 @@
     </ul>
   </section>
 
-  <section class="thanks">
+  <section class="thanks" data-aos="fade-up">
     <h2>감사 인사</h2>
     <p>두 사람의 새로운 시작을 축하해주셔서 감사합니다.<br/>마음 깊이 감사드립니다.</p>
     <div class="contacts">
@@ -74,5 +154,10 @@
   <footer>
     <p>© 2025 김현수💜은지성 모바일 청첩장</p>
   </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 </html>
